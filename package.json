@@ -1,6 +1,6 @@
 {
   "name": "easing-progress",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Easing progress using easings.net functions and cubic bezier",
   "scripts": {
     "release": "npm publish",
