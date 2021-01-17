@@ -1,0 +1,8 @@
+.vscode
+
+dist/
+docs/
+node_modules/
+public-demo/
+
+package-lock.json

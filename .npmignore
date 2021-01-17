@@ -1,0 +1,14 @@
+.vscode
+
+demo/
+node_modules/
+public-demo/
+webpack/
+
+.eslintignore
+.eslintrc.json
+.gitignore
+.npmignore
+.stylelintrc.json
+package-lock.json
+tsconfig.json
