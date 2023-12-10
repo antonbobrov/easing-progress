@@ -1,0 +1,73 @@
+{
+  "name": "easing-progress",
+  "version": "1.0.0",
+  "description": "Easing Progress",
+  "scripts": {
+    "demo:dev": "cross-env NODE_ENV=development webpack serve --config demo/config/webpack/webpack.dev.js",
+    "demo:build": "cross-env NODE_ENV=production webpack --config demo/config/webpack/webpack.prod.js",
+    "lint": "npm run lint:js && npm run lint:style",
+    "lint:js": "eslint . --ext .jsx,.js,.tsx,.ts",
+    "lint:style": "npx stylelint \"**/*.scss\"",
+    "build": "rimraf lib && rimraf build && run-s build:lib build:demo build:docs",
+    "build:lib": "run-s build:esm build:cjs build:types",
+    "build:esm": "tsc -p config/tsconfig.esm.json && tsc-alias -p config/tsconfig.esm.json",
+    "build:cjs": "tsc -p config/tsconfig.cjs.json && tsc-alias -p config/tsconfig.cjs.json",
+    "build:types": "tsc -p config/tsconfig.types.json && tsc-alias -p config/tsconfig.types.json",
+    "build:demo": "npm run demo:build",
+    "build:docs": "typedoc --out build/docs ./src --theme default --hideGenerator",
+    "deploy": "gh-pages -d build",
+    "prepublishOnly": "run-s lint build deploy"
+  },
+  "main": "./lib/cjs/index.js",
+  "types": "./lib/types/index.d.ts",
+  "module": "./lib/esm/index.js",
+  "sideEffects": false,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/antonbobrov/easing-progress.git"
+  },
+  "keywords": [
+    "easing",
+    "progress",
+    "bezier"
+  ],
+  "files": [
+    "lib",
+    "src"
+  ],
+  "author": "Anton Bobrov <anton.bobrov@hotmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@anton.bobrov/eslint-config": "1.4.0",
+    "autoprefixer": "^10.4.15",
+    "bootstrap": "^5.3.2",
+    "clean-webpack-plugin": "^4.0.0",
+    "copy-webpack-plugin": "^11.0.0",
+    "cross-env": "^7.0.3",
+    "css-loader": "^6.8.1",
+    "css-minimizer-webpack-plugin": "^5.0.1",
+    "eslint": "^8.53.0",
+    "gh-pages": "^6.0.0",
+    "html-webpack-plugin": "^5.5.3",
+    "lit-element": "^2.4.0",
+    "mini-css-extract-plugin": "^2.7.6",
+    "normalize.css": "^8.0.1",
+    "npm-run-all": "^4.1.5",
+    "postcss-loader": "^7.3.3",
+    "prettier": "^3.0.3",
+    "rimraf": "^5.0.1",
+    "sass": "^1.66.1",
+    "sass-loader": "^13.3.2",
+    "stylelint": "^14.11.0",
+    "stylelint-config-sass-guidelines": "^9.0.1",
+    "ts-loader": "^9.4.4",
+    "tsc-alias": "^1.8.7",
+    "typedoc": "^0.24.8",
+    "typescript": "^5.1.6",
+    "vevet-dom": "^0.0.15",
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1",
+    "webpack-merge": "^5.9.0"
+  }
+}
