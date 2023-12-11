@@ -1,6 +1,5 @@
 # easing-progress is a JavaScript library of easing functions
 
-![NPM](https://img.shields.io/npm/v/easing-progress?style=flat-squar)
 ![Language](https://img.shields.io/github/languages/top/antonbobrov/easing-progress)
 ![gzip](https://img.shields.io/bundlejs/size/easing-progress)
 
