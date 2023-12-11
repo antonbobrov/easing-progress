@@ -1,6 +1,6 @@
 {
   "name": "easing-progress",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Easing Progress",
   "scripts": {
     "demo:dev": "cross-env NODE_ENV=development webpack serve --config demo/config/webpack/webpack.dev.js",
