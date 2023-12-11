@@ -2,6 +2,7 @@
 
 ![NPM](https://img.shields.io/npm/v/easing-progress?style=flat-squar)
 ![Language](https://img.shields.io/github/languages/top/antonbobrov/easing-progress)
+![gzip](https://img.shields.io/bundlejs/size/easing-progress)
 
 * [See Demo](https://antonbobrov.github.io/easing-progress/)
 * [See Documentation](https://antonbobrov.github.io/easing-progress/docs/)
